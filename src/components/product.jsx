@@ -1,6 +1,11 @@
 import React, { useState } from 'react';
 import { data } from '../data/data.js';
-
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 const Food = () => {
   const [foods, setFoods] = useState(data);
 
@@ -83,6 +88,10 @@ const Food = () => {
             />
             <div className='flex justify-between px-1.5 py-4'>
               <p className='font-bold'>{item.name}</p>
+              {/* <Router>
+                <link to='/products'><button className='border-red-500 text-red-500'>Buy</button></link>
+              </Router> */}
+              
               {/* <p>
                 <span className='bg-red-500 text-white p-1 text-0.5xl rounded-full'>
                   {item.price}

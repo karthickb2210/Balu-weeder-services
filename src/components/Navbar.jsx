@@ -4,10 +4,27 @@ import { BsFillCartFill,BsFillSaveFill } from 'react-icons/bs';
 import {TbTruckDelivery} from 'react-icons/tb'
 import { FaWallet} from 'react-icons/fa'
 import {MdFavorite, MdHelp} from 'react-icons/md'
-
+import {auth,provider} from "./config"
+import {signInWithPopup} from "firebase/auth"
+import { IconName } from "react-icons/ai";
 const Navbar = () => {
 const [nav, setNav] = useState(false)
+const [value,setValue] = useState('')
+const handleClick =()=>{
+  let c = 0;
+  signInWithPopup(auth,provider).then((data)=>{
+    setValue(data.user.user)
+    localStorage.setItem("email",data.user.email)
+    const ele = document.getElementById("log");
+    ele.innerHTML = `${data.user.displayName.toUpperCase()}`
+  })
+  
 
+}
+const logout =()=>{
+  localStorage.clear();
+  window.location.reload();
+}
   return (
     <div  className='max-w-[1640px] mx-auto flex justify-between items-center p-4' id='top'>
       {/* Left side */}
@@ -31,9 +48,14 @@ const [nav, setNav] = useState(false)
           placeholder='Search services'
         />
       </div>
+      
       {/* Cart button */}
-      <button className='bg-black text-white hidden md:flex items-center py-2 rounded-full'>
-        <BsFillCartFill size={20} className='mr-2' /> Cart
+      <button id='log' className='bg-black text-white hidden md:flex items-center py-2 rounded-full' onClick={handleClick}>
+        <BsFillCartFill size={20} className='mr-2' /> LOGIN
+      </button>
+      <button className='bg-black text-white hidden md:flex items-center py-2 rounded-full'
+      onClick={logout} >
+        <BsFillCartFill size={20} className='mr-2' /> LOGOUT
       </button>
 
       {/* Mobile Menu */}

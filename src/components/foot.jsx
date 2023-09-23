@@ -7,8 +7,6 @@ function Foot(){
         <footer class="footer-distributed">
         <h1 className="fth">Balu weeder sales and services</h1>
         <div class="footer-left" id='footer'>
-      
-      
           <p class="footer-links">
             <a href="/" class="link-1">Home</a>
       
