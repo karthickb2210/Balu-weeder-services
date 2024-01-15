@@ -1,22 +1,23 @@
 import React, {useState} from 'react';
 import { AiOutlineMenu, AiOutlineSearch, AiOutlineClose } from 'react-icons/ai';
-import { BsFillCartFill,BsFillSaveFill } from 'react-icons/bs';
+import { BsFillSaveFill } from 'react-icons/bs';
 import {TbTruckDelivery} from 'react-icons/tb'
 import { FaWallet} from 'react-icons/fa'
 import {MdFavorite, MdHelp} from 'react-icons/md'
 import {auth,provider} from "./config"
 import {signInWithPopup} from "firebase/auth"
-import { IconName } from "react-icons/ai";
+import { RiAccountCircleFill ,RiLoginCircleLine} from "react-icons/ri";
 const Navbar = () => {
 const [nav, setNav] = useState(false)
 const [value,setValue] = useState('')
+const [loggout,setLoggout] = useState(false);
 const handleClick =()=>{
-  let c = 0;
   signInWithPopup(auth,provider).then((data)=>{
     setValue(data.user.user)
     localStorage.setItem("email",data.user.email)
     const ele = document.getElementById("log");
     ele.innerHTML = `${data.user.displayName.toUpperCase()}`
+    setLoggout(true);
   })
   
 
@@ -51,12 +52,12 @@ const logout =()=>{
       
       {/* Cart button */}
       <button id='log' className='bg-black text-white hidden md:flex items-center py-2 rounded-full' onClick={handleClick}>
-        <BsFillCartFill size={20} className='mr-2' /> LOGIN
+        <RiAccountCircleFill size={20} className='mr-2' /> LOGIN {value}
       </button>
-      <button className='bg-black text-white hidden md:flex items-center py-2 rounded-full'
-      onClick={logout} >
-        <BsFillCartFill size={20} className='mr-2' /> LOGOUT
-      </button>
+ { loggout && <button className='bg-black text-white hidden md:flex items-center py-2 rounded-full'
+  onClick={logout} >
+    <RiLoginCircleLine size={20} className='mr-2' /> LOGOUT
+  </button>}
 
       {/* Mobile Menu */}
       {/* Overlay */}

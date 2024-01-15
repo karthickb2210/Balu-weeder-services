@@ -1,11 +1,6 @@
 import React, { useState } from 'react';
 import { data } from '../data/data.js';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
-} from "react-router-dom";
+
 const Food = () => {
   const [foods, setFoods] = useState(data);
 
