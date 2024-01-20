@@ -1,13 +1,21 @@
-import React, { useState } from 'react';
-import { data } from '../data/data.js';
-
+import React, {  useEffect, useState } from 'react';
 const Food = () => {
-  const [foods, setFoods] = useState(data);
-
-  //   Filter Type 
+  let dat =[];
+  const [val, setVal] = useState(dat);
+useEffect(()=>{
+  data();
+  },[])
+async function data(){
+    const res = await fetch('https://weeder-details-api.onrender.com')
+    const ans = await res.json();
+    setVal(ans);
+    return ans;
+  }
+  
+  
   const filterType = (category) => {
-    setFoods(
-      data.filter((item) => {
+    setVal(
+      val.filter((item) => {
         return item.category === category;
       })
     );
@@ -28,7 +36,7 @@ const Food = () => {
           <p className='font-bold text-gray-700'>Filter Type</p>
           <div className='flex justfiy-between flex-wrap'>
             <button
-              onClick={() => setFoods(data)}
+              onClick={() => setVal(val)}
               className='m-1 border-red-500 text-red-500 hover:bg-red-500 hover:text-white'
             >
               All
@@ -65,13 +73,12 @@ const Food = () => {
             </button>
           </div>
         </div>
+        {/* <button onClick={data}>Press me</button> */}
 
        
       </div>
-
-      {/* Display foods */}
-      <div className='grid grid-cols-2 lg:grid-cols-4 gap-6 pt-4'>
-        {foods.map((item, index) => (
+ <><div className='grid grid-cols-2 lg:grid-cols-4 gap-6 pt-4'>
+        {val.map((item, index) => (
           <div
             key={index}
             className='border shadow-lg rounded-lg hover:scale-105 duration-300'
@@ -95,8 +102,13 @@ const Food = () => {
             </div>
           </div>
         ))}
-      </div>
+      </div></>
+
+      {/* Display val */}
+      
+
     </div>
+
   );
 };
 
