@@ -1,6 +1,9 @@
 import React, {  useEffect, useState } from 'react';
 const Food = () => {
+  
+  
   let dat =[];
+ 
   const [val, setVal] = useState(dat);
 useEffect(()=>{
   data();

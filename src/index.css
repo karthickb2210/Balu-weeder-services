@@ -17,3 +17,7 @@
   width: 90%;
   border-radius: 40px;
 }
+.headlineimg{
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+}

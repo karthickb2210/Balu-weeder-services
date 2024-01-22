@@ -4,7 +4,7 @@ import Services from './img/services.png'
 import support from './img/support.png'
 const HeadlineCards = () => {
   return (
-    <div className='max-w-[1640px] mx-auto p-4 py-12 grid md:grid-cols-3 gap-6'>
+    <div className='max-w-[1800px] max-h-[900px] mx-auto p-4 py-12 grid md:grid-cols-3 gap-6'>
       {/* Card */}
       <div className='rounded-xl relative'>
         {/* Overlay */}
@@ -14,7 +14,7 @@ const HeadlineCards = () => {
           <button className='border-white bg-white text-black mx-2 absolute bottom-4'>Explore</button>
         </div>
         <img
-        className='max-h-[160px] md:max-h-[200px] w-full object-cover rounded-xl'
+        className='max-h-[160px] md:max-h-[250px] w-full object-cover rounded-xl'
           src={Sales}
           alt='/'
         />
@@ -28,7 +28,7 @@ const HeadlineCards = () => {
           <button className='border-white bg-white text-black mx-2 absolute bottom-4'>Explore</button>
         </div>
         <img
-        className='max-h-[160px] md:max-h-[200px] w-full object-cover rounded-xl'
+        className='max-h-[160px] md:max-h-[250px] w-full object-cover rounded-xl'
           src={Services}
           alt='/'
         />
@@ -42,7 +42,7 @@ const HeadlineCards = () => {
           <button className='border-white bg-white text-black mx-2 absolute bottom-4'>Explore</button>
         </div>
         <img
-        className='max-h-[160px] md:max-h-[200px] w-full object-cover rounded-xl'
+        className='max-h-[160px] md:max-h-[250px] w-full object-cover rounded-xl'
           src={support}
           alt='/'
         />
