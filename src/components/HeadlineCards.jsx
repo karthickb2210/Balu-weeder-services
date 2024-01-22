@@ -11,7 +11,7 @@ const HeadlineCards = () => {
         <div className='absolute w-full h-full bg-black/50 rounded-xl text-white'>
           <p className='font-bold text-2xl px-2 pt-4'>Sales</p>
           <p className='px-2'> </p>
-          <button className='border-white bg-white text-black mx-2 absolute bottom-4'>Order Now</button>
+          <button className='border-white bg-white text-black mx-2 absolute bottom-4'>Explore</button>
         </div>
         <img
         className='max-h-[160px] md:max-h-[250px] w-full object-cover rounded-xl'
@@ -25,7 +25,7 @@ const HeadlineCards = () => {
         <div className='absolute w-full h-full bg-black/50 rounded-xl text-white'>
           <p className='font-bold text-2xl px-2 pt-4'>Services</p>
           <p className='px-2'></p>
-          <button className='border-white bg-white text-black mx-2 absolute bottom-4'>Order Now</button>
+          <button className='border-white bg-white text-black mx-2 absolute bottom-4'>Explore</button>
         </div>
         <img
         className='max-h-[160px] md:max-h-[250px] w-full object-cover rounded-xl'
@@ -39,7 +39,7 @@ const HeadlineCards = () => {
         <div className='absolute w-full h-full bg-black/50 rounded-xl text-white'>
           <p className='font-bold text-2xl px-2 pt-4'>Support</p>
           <p className='px-2'></p>
-          <button className='border-white bg-white text-black mx-2 absolute bottom-4'>Order Now</button>
+          <button className='border-white bg-white text-black mx-2 absolute bottom-4'>Explore</button>
         </div>
         <img
         className='max-h-[160px] md:max-h-[250px] w-full object-cover rounded-xl'
