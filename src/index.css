@@ -8,3 +8,12 @@
     @apply border border-black rounded-xl px-5 py-1
   }
 }
+
+.img {
+  background-image: url('./components/img/main.png');
+  background-size: cover;
+  object-fit: cover;
+  height: 600px;
+  width: 90%;
+  border-radius: 40px;
+}

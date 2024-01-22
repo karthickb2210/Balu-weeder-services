@@ -1,4 +1,4 @@
-import React from 'react'
+import React  from 'react'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import HeadlineCards from './components/HeadlineCards'
@@ -7,6 +7,10 @@ import Product from './components/product'
 import Foot from './components/foot'
 
 function App() {
+ 
+    
+  
+
   return (
     <div>
         <Navbar />
@@ -15,6 +19,7 @@ function App() {
         <Product />
         {/* <Category /> */}
         <Foot />
+    
     </div>
   );
 }
