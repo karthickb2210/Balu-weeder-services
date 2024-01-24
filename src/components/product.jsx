@@ -1,10 +1,11 @@
 import React, {  useEffect, useState } from 'react';
-const Food = () => {
+const Product = () => {
   
   
   let dat =[];
  
   const [val, setVal] = useState(dat);
+  const [ load,setLoad] = useState(false);
 useEffect(()=>{
   data();
   },[])
@@ -12,6 +13,7 @@ async function data(){
     const res = await fetch('https://weeder-details-api.onrender.com')
     const ans = await res.json();
     setVal(ans);
+    setLoad(true);
     return ans;
   }
   
@@ -31,7 +33,7 @@ async function data(){
       <h1 className='text-red-500 font-bold text-4xl text-center'>
         Products We Sell
       </h1>
-
+      {!load && <h1>Loading</h1>}
       {/* Filter Row */}
       <div className='flex flex-col lg:flex-row justify-between'>
         {/* Fliter Type */}
@@ -115,4 +117,4 @@ async function data(){
   );
 };
 
-export default Food;
+export default Product;
