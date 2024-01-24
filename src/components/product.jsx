@@ -33,7 +33,7 @@ async function data(){
       <h1 className='text-red-500 font-bold text-4xl text-center'>
         Products We Sell
       </h1>
-      {!load && <h1>Loading</h1>}
+     
       {/* Filter Row */}
       <div className='flex flex-col lg:flex-row justify-between'>
         {/* Fliter Type */}
@@ -82,6 +82,7 @@ async function data(){
 
        
       </div>
+       {!load && <h1>Loading</h1>}
  <><div className='grid grid-cols-2 lg:grid-cols-4 gap-6 pt-4'>
         {val.map((item, index) => (
           <div
