@@ -1,4 +1,5 @@
 import React, {  useEffect, useState } from 'react';
+import Loader from '../Spinner/Loader';
 const Product = () => {
   
   
@@ -25,9 +26,6 @@ async function data(){
       })
     );
   };
-
-  
-
   return (
     <div className='max-w-[1640px] m-auto px-4 py-12' id='product'>
       <h1 className='text-red-500 font-bold text-4xl text-center'>
@@ -78,17 +76,18 @@ async function data(){
             </button>
           </div>
         </div>
-        {/* <button onClick={data}>Press me</button> */}
+       
 
        
       </div>
-       {!load && <h1>Loading</h1>}
+        {!load &&<Loader />} 
  <><div className='grid grid-cols-2 lg:grid-cols-4 gap-6 pt-4'>
         {val.map((item, index) => (
           <div
             key={index}
             className='border shadow-lg rounded-lg hover:scale-105 duration-300'
           >
+          
             <img
               src={item.image}
               alt={item.name}
@@ -96,6 +95,7 @@ async function data(){
             />
             <div className='flex justify-between px-1.5 py-4'>
               <p className='font-bold'>{item.name}</p>
+              
               {/* <Router>
                 <link to='/products'><button className='border-red-500 text-red-500'>Buy</button></link>
               </Router> */}
