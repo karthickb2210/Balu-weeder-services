@@ -7,6 +7,7 @@ import {MdFavorite, MdHelp} from 'react-icons/md'
 import {auth,provider} from "./config"
 import {signInWithPopup} from "firebase/auth"
 import { RiAccountCircleFill ,RiLoginCircleLine} from "react-icons/ri";
+import { Link } from 'react-router-dom';
 const Navbar = () => {
 const [nav, setNav] = useState(false)
 const [value,setValue] = useState('')
