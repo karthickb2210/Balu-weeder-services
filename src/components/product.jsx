@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const Product = () => {
  
   
-  let dat =[];
+   let dat =[];
  
   const [val, setVal] = useState(dat);
   const [ load,setLoad] = useState(false);

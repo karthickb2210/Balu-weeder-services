@@ -1,8 +1,7 @@
 import React  from 'react'
 import { BrowserRouter, Route ,Routes} from 'react-router-dom';
-import Petrolweeder from '../../Productspage/petrolweeder'
+import Productdetails from '../../Productspage/Productdetails';
 import MainPage from '../../mainpage/MainPage'
-import data from '../../data/data.js'
 function Layout() {
  
   
@@ -11,7 +10,7 @@ function Layout() {
   <BrowserRouter>
       <Routes>
       <Route path='/' element={<MainPage />}></Route>
-        <Route path="/:id" element={<Petrolweeder />}></Route>
+        <Route path="/:id" element={<Productdetails />}></Route>
       </Routes>
     </BrowserRouter>
       
