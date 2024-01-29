@@ -1,7 +1,12 @@
 import React from 'react'
 import Navbar from '../components/Navbar'
 import Foot from '../components/foot'
-function Petrolweeder(props) {
+import { useParams } from 'react-router-dom';
+import data from '../data/data';
+function Petrolweeder() {
+
+    const  params  = useParams();
+  
   return (
    <>
    <Navbar />
@@ -10,7 +15,7 @@ function Petrolweeder(props) {
         <div class="flex flex-col md:flex-row -mx-4">
             <div class="md:flex-1 px-4">
                 <div class="h-[460px] rounded-lg bg-gray-300 dark:bg-gray-700 mb-4">
-                    <img class="w-full h-full object-cover" src="https://cdn.pixabay.com/photo/2020/05/22/17/53/mockup-5206355_960_720.jpg" alt="Product " />
+                    <img class="w-full h-full object-cover" src={data[params.id-1].image} alt="Product " />
                 </div>
                 <div class="flex -mx-2 mb-4">
                     <div class="w-1/2 px-2">
@@ -20,7 +25,7 @@ function Petrolweeder(props) {
                 </div>
             </div>
             <div class="md:flex-1 px-4">
-                <h2 class="text-2xl font-bold text-gray-800 dark:text-white mb-2">{props.pname}</h2>
+                <h2 class="text-2xl font-bold text-gray-800 dark:text-white mb-2">{data[params.id-1].name}</h2>
                 <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed
                     ante justo. Integer euismod libero id mauris malesuada tincidunt.
@@ -28,7 +33,7 @@ function Petrolweeder(props) {
                 <div class="flex mb-4">
                     <div class="mr-4">
                         <span class="font-bold text-gray-700 dark:text-gray-300">Price:</span>
-                        <span class="text-gray-600 dark:text-gray-300">$29.99</span>
+                        <span class="text-gray-600 dark:text-gray-300">{data[params.id-1].price}</span>
                     </div>
                     <div>
                         <span class="font-bold text-gray-700 dark:text-gray-300">Availability:</span>

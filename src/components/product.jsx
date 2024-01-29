@@ -2,7 +2,7 @@ import React, {  useEffect, useState } from 'react';
 import Loader from '../Spinner/Loader';
 import { Link } from 'react-router-dom';
 const Product = () => {
-  
+ 
   
   let dat =[];
  
@@ -98,7 +98,7 @@ async function data(){
               <p className='font-bold'>{item.name}</p>
               
             
-              <Link to={`/${item.name}`}> <button className='border-red-500 hover:bg-red-500 hover:text-white text-red-500'>Buy</button></Link> 
+              <Link to={`/${item.id}`}> <button className='border-red-500 hover:bg-red-500 hover:text-white text-red-500'>Buy</button></Link> 
              
               
               {/* <p>
