@@ -50,7 +50,7 @@ const logout =()=>{
         />
       </div>
       
-      {/* Cart button */}
+      {/* login button */}
       <button id='log' className='bg-black text-white hidden md:flex items-center py-2 rounded-full' onClick={handleClick}>
         <RiAccountCircleFill size={20} className='mr-2' /> LOGIN {value}
       </button>

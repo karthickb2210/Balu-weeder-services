@@ -1,9 +1,10 @@
 import React, {  useEffect, useState } from 'react';
 import Loader from '../Spinner/Loader';
+import { Link } from 'react-router-dom';
 const Product = () => {
+ 
   
-  
-  let dat =[];
+   let dat =[];
  
   const [val, setVal] = useState(dat);
   const [ load,setLoad] = useState(false);
@@ -96,9 +97,9 @@ async function data(){
             <div className='flex justify-between px-1.5 py-4'>
               <p className='font-bold'>{item.name}</p>
               
-              {/* <Router>
-                <link to='/products'><button className='border-red-500 text-red-500'>Buy</button></link>
-              </Router> */}
+            
+              <Link to={`/${item.id}`}> <button className='border-red-500 hover:bg-red-500 hover:text-white text-red-500'>Buy</button></Link> 
+             
               
               {/* <p>
                 <span className='bg-red-500 text-white p-1 text-0.5xl rounded-full'>
