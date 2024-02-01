@@ -3,7 +3,7 @@ import React from 'react'
 import Hero from '../components/Hero'
 import HeadlineCards from '../components/HeadlineCards'
 import Product from '../components/product'
-import Foot from '../components/foot'
+
 
 function MainPage() {
   return (
@@ -12,7 +12,7 @@ function MainPage() {
         <Hero />
         <HeadlineCards />
         <Product />
-        <Foot />
+       
     </>
   )
 }

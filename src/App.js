@@ -1,15 +1,17 @@
 import React  from 'react'
 import Navbar from './components/Navbar'
 import Layout from './components/layout/layout';
- 
+import Foot from './components/foot';
 function App() {
  
   return (
-    <div>
+    <>
+      {/* <Sales /> */}
       <Navbar />
-   <Layout />
+   <Layout /> 
        {/* <MainPage /> */}
-    </div>
+       <Foot />
+    </>
   );
 }
 
