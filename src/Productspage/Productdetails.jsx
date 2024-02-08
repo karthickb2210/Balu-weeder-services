@@ -1,5 +1,4 @@
 import React, { useState,useEffect } from 'react'
-import Foot from '../components/foot'
 import { useParams } from 'react-router-dom';
 import Spinner1 from '../Spinner/Spinner1';
 
