@@ -65,7 +65,7 @@ async function dataa(){
 </div>
    }
     
-<Foot />
+
 
    </>
   )
