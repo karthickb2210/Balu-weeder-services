@@ -12,7 +12,7 @@ useEffect(()=>{
   dataa();
   },[])
 async function dataa(){
-    const res = await fetch('https://weeder-details-api.onrender.com')
+    const res = await fetch('https://balu-weeder-services.onrender.com')
     const ans = await res.json();
     setVal(ans);
     setLoad(true);
