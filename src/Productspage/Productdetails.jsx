@@ -1,7 +1,8 @@
 import React, { useState,useEffect } from 'react'
+
 import { useParams } from 'react-router-dom';
 import Spinner1 from '../Spinner/Spinner1';
-
+import { Link } from 'react-router-dom';
 function Productdetails() {
     const  params  = useParams();
     let dat =[];
@@ -11,7 +12,7 @@ useEffect(()=>{
   dataa();
   },[])
 async function dataa(){
-    const res = await fetch('https://balu-weeder-services.onrender.com')
+    const res = await fetch('https://weeder-details-api.onrender.com')
     const ans = await res.json();
     setVal(ans);
     setLoad(true);
@@ -30,7 +31,11 @@ async function dataa(){
                </div>
                <div class="flex -mx-2 mb-4">
                    <div class="w-1/2 px-2">
-                       <button class="w-full bg-gray-900 dark:bg-gray-600 text-white py-2 px-4 rounded-full font-bold hover:bg-gray-800 dark:hover:bg-gray-700">Add to Cart</button>
+
+                    <Link to={`/booknow`}>
+                    <button class="w-full bg-gray-900 dark:bg-gray-600 text-white py-2 px-4 rounded-full font-bold hover:bg-gray-800 dark:hover:bg-gray-700">Book now</button>
+
+                    </Link>
                    </div>
                  
                </div>

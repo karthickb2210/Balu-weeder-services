@@ -5,6 +5,7 @@ import MainPage from '../../mainpage/MainPage'
 import Sales from '../../Heropage/Sales';
 import Services from '../../Heropage/Services';
 import Support from '../../Heropage/Support';
+import Booknow from '../Booknow';
 function Layout() {
  
   
@@ -17,6 +18,7 @@ function Layout() {
         <Route path='/sales' element={<Sales />}></Route>
         <Route path='/services' element={<Services />}></Route>
         <Route path='/support' element={<Support />}></Route>
+        <Route path='/booknow' element={<Booknow />}></Route>
       </Routes>
     </BrowserRouter>
       

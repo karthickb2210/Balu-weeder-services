@@ -98,7 +98,7 @@ async function data(){
               <p className='font-bold'>{item.name}</p>
               
             
-              <Link to={`/${item.id}`}> <button className='border-red-500 hover:bg-red-500 hover:text-white text-red-500'>Buy</button></Link> 
+              <Link to={`/${item.id}`}> <button className='border-red-500 hover:bg-red-500 hover:text-white text-red-500'>Explore</button></Link> 
              
               
               {/* <p>
