@@ -1,7 +1,7 @@
 import React from 'react';
-import Sale from './img/sales.png'
-import Services from './img/services.png'
-import support from './img/support.png'
+import Sale from './img/sales.jpg'
+import Services from './img/services.jpg'
+import support from './img/support.jpg'
 import { Link } from 'react-router-dom';
 import Sales from '../Heropage/Sales';
 import Support from '../Heropage/Support';

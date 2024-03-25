@@ -10,7 +10,7 @@
 }
 
 .img {
-  background-image: url('./components/img/main.png');
+  background-image: url('./components/img/main.jpg');
   background-size: cover;
   object-fit: cover;
   height: 600px;
