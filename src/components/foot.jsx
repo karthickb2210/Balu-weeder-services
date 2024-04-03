@@ -3,7 +3,7 @@ import "./css/foot.css";
 function Foot() {
   return (
     <>
-      <footer class="footer-distributed">
+      <footer className="footer-distributed">
         <h1 className="fth">Balu weeder sales and services</h1>
         <div className="footer-left" id="footer">
           <p className="footer-links">

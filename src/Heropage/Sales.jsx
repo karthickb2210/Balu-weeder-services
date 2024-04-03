@@ -15,7 +15,7 @@ function Sales() {
         <div className="post-inner">
           <h2>Innovation</h2>
        
-          <p class="summary">We stay at the forefront of agricultural technology, continuously innovating and improving our products to meet the evolving needs of modern farmers.</p>
+          <p className="summary">We stay at the forefront of agricultural technology, continuously innovating and improving our products to meet the evolving needs of modern farmers.</p>
         </div>
       </a>
       <a href="/" className="post blue">

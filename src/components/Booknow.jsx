@@ -24,6 +24,7 @@ function Form() {
 
     try {
       await axios.post('https://fetch-usereport.onrender.com/new', formData);
+      
       alert('Form submitted successfully!');
     } catch (error) {
       console.error(error);
@@ -33,7 +34,11 @@ function Form() {
   };
 
   return (
-    <div className='w-full max-w-xs ml-60 my-48  '>
+    
+    <div className=' flex justify-center items-center'>
+      
+    <div className='w-full max-w-xs my-[150px]  '>
+    <h1 className=' text-[30px]'>Please fill the form </h1>
     <form className='bg-white shadow-md  border-black rounded max-w-2xl px-8 pt-6 pb-8 mb-4' onSubmit={handleSubmit}>
       <label className='block text-gray-700 text-sm max-w-xl font-bold mb-2'>Name:</label>
       <input className='shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
@@ -49,7 +54,7 @@ function Form() {
         value={formData.phone}
         onChange={handleChange}
       />
-      <label className='block text-gray-700 text-sm font-bold mb-2'>mail</label>
+      <label className='block text-gray-700 text-sm font-bold mb-2'>E-mail</label>
       <input className='shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
         name="mail"
         value={formData.mail}
@@ -65,6 +70,8 @@ function Form() {
       <button className=' bg-red-600 my-10  text-black border-red '  type="submit">Submit</button>
     </form>
     </div>
+    </div>
+    
   );
 }
 
