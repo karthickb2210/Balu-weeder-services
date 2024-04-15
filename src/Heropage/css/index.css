@@ -11,13 +11,13 @@ body {
 
 .wrap {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-start;
   flex-direction: row-reverse;
   min-height: 100%;
 }
 
 .posts {
-  width: calc(100% - 280px);
+  width: calc(100% - 50px);
 }
 
 .post-sidebar {

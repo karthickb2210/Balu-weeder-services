@@ -1,11 +1,8 @@
 import React, {  useEffect, useState } from 'react';
 import Loader from '../Spinner/Loader';
 import { Link } from 'react-router-dom';
+let dat =[];
 const Product = () => {
- 
-  
-   let dat =[];
- 
   const [val, setVal] = useState(dat);
   const [ load,setLoad] = useState(false);
 useEffect(()=>{
@@ -15,14 +12,13 @@ async function data(){
     const res = await fetch('https://nice-red-barracuda-gown.cyclic.app')
     const ans = await res.json();
     setVal(ans);
+    dat = ans;
     setLoad(true);
     return ans;
   }
-  
-  
   const filterType = (category) => {
     setVal(
-      val.filter((item) => {
+      dat.filter((item) => {
         return item.category === category;
       })
     );
@@ -40,7 +36,7 @@ async function data(){
           <p className='font-bold text-gray-700'>Filter Type</p>
           <div className='flex justfiy-between flex-wrap'>
             <button
-              onClick={() => setVal(val)}
+              onClick={() => setVal(dat)}
               className='m-1 border-red-500 text-red-500 hover:bg-red-500 hover:text-white'
             >
               All

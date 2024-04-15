@@ -29,11 +29,13 @@ const logout =()=>{
         {/* <div onClick={()=> setNav(!nav)} className='cursor-pointer'>
           <AiOutlineMenu size={30} />
         </div> */}
+        <div className=' flex flex-col'>
         <h1 className='text-2xl sm:text-3xl lg:text-4xl px-2 flex-auto'>
           BALU WEEDER <span className='font-bold text-red-600'>SALES</span>
-          <h2 className='text-2xl sm:text-3xl lg:text-2xl px-0.5'>GSTIN : 33DRAPR8739B1ZR</h2>
+         
         </h1>
-        
+        <h2 className='text-2xl sm:text-3xl lg:text-2xl px-2'>GSTIN : 33DRAPR8739B1ZR</h2>
+        </div>
       </div>
 
       {/* Search Input */}
