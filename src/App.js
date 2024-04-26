@@ -1,16 +1,24 @@
-import React  from 'react'
-import Navbar from './components/Navbar'
-import Layout from './components/layout/layout';
-import Foot from './components/foot';
+import React from "react";
+import Navbar from "./components/Navbar";
+import Layout from "./components/layout/layout";
+import Foot from "./components/foot";
+import { BrowserRouter } from "react-router-dom";
+
+import { UserContextProvider } from "./components/context/userContext";
 function App() {
- 
   return (
     <>
-      {/* <Sales /> */}
-      <Navbar />
-   <Layout /> 
-       {/* <MainPage /> */}
-       <Foot />
+      <UserContextProvider>
+        <BrowserRouter>
+          {/* <Sales /> */}
+
+          <Navbar />
+
+          <Layout />
+          {/* <MainPage /> */}
+          <Foot />
+        </BrowserRouter>
+      </UserContextProvider>
     </>
   );
 }
