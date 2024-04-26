@@ -9,7 +9,7 @@ useEffect(()=>{
   data();
   },[])
 async function data(){
-    const res = await fetch('https://nice-red-barracuda-gown.cyclic.app')
+    const res = await fetch('https://balu-weeder-services.onrender.com')
     const ans = await res.json();
     setVal(ans);
     dat = ans;
